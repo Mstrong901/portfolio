@@ -1,0 +1,239 @@
+<style>
+
+.todo-delete {
+  margin: 10px !important;
+}
+
+.todo-checkbox {
+  margin: 10px !important;
+  vertical-align: middle !important;
+}
+
+.btn-danger {
+  border-radius: 2px !important;
+  width: 12px !important;
+  height: 12px !important;
+  padding: 1px !important;
+  vertical-align: middle !important;
+}
+
+.list-group-item {
+  color: rgb(0, 117, 172);
+  text-align: left !important;
+}
+
+.todo-container {
+  text-align: left !important;
+  display:block; 
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:rgb(0, 117, 172);
+  opacity: .5; /* Firefox */
+}
+
+
+</style>
+
+<!doctype html>
+<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Site Meta -->
+    <title>Genius</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+	<!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"> 
+
+	<!-- Custom & Default Styles -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body class="left-menu">  
+    
+    <div class="menu-wrapper">
+
+
+        <header class="vertical-header">
+            <div class="vertical-header-wrapper">
+                <nav class="nav-menu">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" alt=""></a>
+                    </div><!-- end logo -->
+
+                    <div class="margin-block"></div>
+
+                    <ul class="primary-menu">
+                        <li class="child-menu"><a href="index.html">Home <i class="fa fa-angle-right"></i></a>
+                            
+                        </li>
+
+                        <li class="child-menu"><a href="#">Portfolio <i class="fa fa-angle-right"></i></a>
+                            <div class="sub-menu-wrapper">
+                                <ul class="sub-menu center-content">
+                                        <li><a href="https://spacefacemusic.com/" target="blank">Web Design | Spaceface</a></li>
+                                        <li><a href="WW.html">Graphic Design | Wealthy West</a></li>
+                                        <li><a href="todo.html">Application | To Do List </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                    
+                    <div class="margin-block"></div>
+
+                    <div class="menu-search">
+                        
+                    </div><!-- end menu-search -->
+
+                    <div class="margin-block"></div>
+
+                    <div class="menu-social">
+                        <ul class="list-inline text-center">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div><!-- end menu -->
+                </nav><!-- end nav-menu -->
+            </div><!-- end vertical-header-wrapper -->
+        </header><!-- end header -->
+    </div><!-- end menu-wrapper -->
+
+<!--Begin To Do-->
+<div id="wrapper">
+    <div id="home" class="video-section js-height-full">
+        
+        <div class="home-text-wrapper relative container">
+            <div class="home-message">
+              <div class="col-md-3"></div>               
+              <div class="col-md-6">
+                <div id="myDIV" class="header">
+                    <h2 style="color: rgba(0, 0, 0, 0.719) ;background-color: rgba(0, 153, 255, 0.404); border-bottom: 2px solid rgba(0, 0, 0, 0.486);">My To Do List</h2>
+                    <ul style="list-style-type:none;" class="list-group list-group-flush">
+                      <li class="list-group-item">Add an Activity to the To Do List</li>
+                      <li class="list-group-item">You May Click the Checkbox to Mark the Activity as Done</li>
+                      <li class="list-group-item">You May Click the Red Box to Delete the Activity</li>
+                    </ul>
+                </div>
+                
+                <div class="row">
+                  <span class="col-md-6">Total Activities: <span id="item-count">0</span></span>
+                  <span class="col-md-6">Activities Done: <span id="unchecked-count">0</span></span>
+                </div>
+                <div>
+                  <input id="item" class="col-md-8" type="text" placeholder="Activity..">
+                  <button id="addbtn" class="col-md-4" onclick="newTodo()">Add Activity</button>
+                  <br><br>
+                  <div class="row">
+                    <ul style="list-style-type:none; padding-left:5px; background-color:rgba(0, 153, 255, 0.151)" class="col-md-12 list-group" id="todo-list">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
+
+
+<script>
+  const itemInput = document.getElementById("item");
+  const list = document.getElementById("todo-list");
+  const itemCountSpan = document.getElementById("item-count");
+  const uncheckedCountSpan = document.getElementById("unchecked-count");
+  
+  function newTodo() {
+    let myItem = itemInput.value;
+  
+    const todoItem = document.createElement("li");
+    todoItem.setAttribute("class", "todo-container");
+  
+    const todoText = document.createElement("span");
+    todoText.setAttribute("class", " todo-text");
+  
+    const todoCheck = document.createElement("input");
+    todoCheck.setAttribute("type", "checkbox");
+    todoCheck.setAttribute("class", "float-left todo-checkbox");
+  
+    const todoDelete = document.createElement("button");
+    todoDelete.setAttribute("class", "btn btn-danger btn-sm todo-delete");
+  
+    todoItem.appendChild(todoCheck);
+    todoItem.appendChild(todoText);
+    todoItem.appendChild(todoDelete);
+    todoText.textContent = myItem;
+  
+    list.appendChild(todoItem);
+  
+    let checkCount = uncheckedCountSpan.innerHTML;
+    checkCount = Number(checkCount) + 1;
+    uncheckedCountSpan.innerHTML = checkCount;
+  
+    let itemCount = itemCountSpan.innerHTML;
+    itemCount = Number(itemCount) + 1;
+    itemCountSpan.innerHTML = itemCount;
+  
+    todoCheck.addEventListener("change", function() {
+      if (todoCheck.checked) {
+        let checkCount = uncheckedCountSpan.innerHTML;
+        checkCount = Number(checkCount) - 1;
+        uncheckedCountSpan.innerHTML = checkCount;
+      } else {
+        let checkCount = uncheckedCountSpan.innerHTML;
+        checkCount = Number(checkCount) + 1;
+        uncheckedCountSpan.innerHTML = checkCount;
+      }
+    });
+  
+    todoDelete.addEventListener("click", function() {
+      if(todoCheck.checked !== true) {
+        let checkCount = uncheckedCountSpan.innerHTML;
+          checkCount = Number(checkCount) - 1;
+          uncheckedCountSpan.innerHTML = checkCount;
+      }
+      let itemCount = itemCountSpan.innerHTML;
+        itemCount = Number(itemCount) - 1;
+        itemCountSpan.innerHTML = itemCount;  
+      todoItem.parentNode.removeChild(todoItem);
+      
+    });
+  
+    itemInput.value = "";
+  }
+  </script>
