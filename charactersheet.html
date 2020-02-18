@@ -1,301 +1,496 @@
+<style>
+  td {
+      border: 1px solid black !important;
+  }
+  ul[title]::before {
+  content: attr(title);
+  /* then add some nice styling as needed, eg: */
+  display: block;
+  font-weight: bold;
+  padding: 4px;
+  }
+  li {
+      height: 45px;
+  }
+
+  .rolls {
+      cursor: pointer;
+  }
+
+  .stats {
+      cursor: pointer;
+  }
+
+  .selected {
+      font-size: large;
+      color: darkcyan;
+      background-color: rgba(255, 230, 0, 0.651) !important;
+
+  }
+
+  .enhanced {
+      font-size: large;
+      color: green;
+      background-color: rgba(126, 216, 146, 0.329) !important;
+  }
+
+</style>
+
 <!doctype html>
 <!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
 
-    <!-- Basic -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Mobile Meta -->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <!-- Site Meta -->
-    <title>Genius</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <!-- Basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Mobile Meta -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <!-- Site Meta -->
+  <title>Genius</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <!-- Site Icons -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-	<!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"> 
+<!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"> 
 
-	<!-- Custom & Default Styles -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/carousel.css">
-    <link rel="stylesheet" href="style.css">
+<!-- Custom & Default Styles -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="style.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
-	<!--[if lt IE 9]>
-		<script src="js/vendor/html5shiv.min.js"></script>
-		<script src="js/vendor/respond.min.js"></script>
-	<![endif]-->
+<!--[if lt IE 9]>
+  <script src="js/vendor/html5shiv.min.js"></script>
+  <script src="js/vendor/respond.min.js"></script>
+<![endif]-->
 
 </head>
 <body class="left-menu">  
-    
-    <div class="menu-wrapper">
+  
+  <div class="menu-wrapper">
 
 
-        <header class="vertical-header">
-            <div class="vertical-header-wrapper">
-                <nav class="nav-menu">
-                    <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" alt=""></a>
-                    </div><!-- end logo -->
+      <header class="vertical-header">
+          <div class="vertical-header-wrapper">
+              <nav class="nav-menu">
+                  <div class="logo">
+                      <a href="index.html"><img src="images/logo.png" alt=""></a>
+                  </div><!-- end logo -->
 
-                    <div class="margin-block"></div>
+                  <div class="margin-block"></div>
 
-                    <ul class="primary-menu">
-                        <li class="child-menu"><a href="index.html">Home <i class="fa fa-angle-right"></i></a>
-                            
-                        </li>
+                  <ul class="primary-menu">
+                      <li class="child-menu"><a href="index.html">Home <i class="fa fa-angle-right"></i></a>
+                          
+                      </li>
 
-                        <li class="child-menu"><a href="#">Portfolio <i class="fa fa-angle-right"></i></a>
-                            <div class="sub-menu-wrapper">
-                                <ul class="sub-menu center-content">
-                                        <li><a href="https://spacefacemusic.com/" target="blank">Web Design | Spaceface</a></li>
-                                        <li><a href="WW.html">Graphic Design | Wealthy West</a></li>
-                                        <li><a href="todo.html">Application | To Do List </a></li>
-                                        <li><a href="charactersheet.html">Application | To Do List </a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        
-                        
-                        
-                    </ul>
-                    
-                    <div class="margin-block"></div>
+                      <li class="child-menu"><a href="#">Portfolio <i class="fa fa-angle-right"></i></a>
+                          <div class="sub-menu-wrapper">
+                              <ul class="sub-menu center-content">
+                                      <li><a href="https://spacefacemusic.com/" target="blank">Web Design | Spaceface</a></li>
+                                      <li><a href="WW.html">Graphic Design | Wealthy West</a></li>
+                                      <li><a href="todo.html">Application | To Do List </a></li>
+                                      <li><a href="charactersheet.html">Application | To Do List </a></li>
+                              </ul>
+                          </div>
+                      </li>
+                      
+                      
+                      
+                  </ul>
+                  
+                  <div class="margin-block"></div>
 
-                    <div class="menu-search">
-                        
-                    </div><!-- end menu-search -->
+                  <div class="menu-search">
+                      
+                  </div><!-- end menu-search -->
 
-                    <div class="margin-block"></div>
+                  <div class="margin-block"></div>
 
-                    <div class="menu-social">
-                        <ul class="list-inline text-center">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
-                    </div><!-- end menu -->
-                </nav><!-- end nav-menu -->
-            </div><!-- end vertical-header-wrapper -->
-        </header><!-- end header -->
-    </div><!-- end menu-wrapper -->
+                  <div class="menu-social">
+                      <ul class="list-inline text-center">
+                          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                      </ul>
+                  </div><!-- end menu -->
+              </nav><!-- end nav-menu -->
+          </div><!-- end vertical-header-wrapper -->
+      </header><!-- end header -->
+  </div><!-- end menu-wrapper -->
 
 <!--Begin CharSheet-->
 <div id="wrapper">
-    <div id="home" class="video-section js-height-full">
-        
-        <div class="home-text-wrapper relative container">
-            <div class="home-message">
+  <div id="home" class="video-section js-height-full">
+      
+      <div class="home-text-wrapper relative container">
+          <div class="home-message">
 
-                <form>
-                    <h1>Dungeons & Dragons Character Sheet</h1>
-                  <div class="row">
+              <form>
+                  <h1>Dungeons & Dragons Character Sheet</h1>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="col">
+                      <label for="">Name</label>
+                      <input type="text" class="form-control" placeholder="">
+                    </div>
+                    <br>
+                    <div class="col">
+                      <label for="">Race</label>
+                      <select id="raceSelector" class="form-control" placeholder="">
+                          <option selected></option>
+                          <option>Dragonborn</option>
+                          <option>Dwarf</option>
+                          <option>Elf</option>
+                          <option>Gnome</option>
+                          <option>Half-Elf</option>
+                          <option>Half-Orc</option>
+                          <option>Halfling</option>
+                          <option>Human</option>
+                          <option>Tiefling</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                      <div class="col">
+                        <label for="">Class</label>
+                        <select class="form-control" placeholder="">
+                          <option selected></option>
+                          <option>Barbarian</option>
+                          <option>Bard</option>
+                          <option>Cleric</option>
+                          <option>Druid</option>
+                          <option>Fighter</option>
+                          <option>Monk</option>
+                          <option>Paladin</option>
+                          <option>Ranger</option>
+                          <option>Rogue</option>
+                          <option>Sorcerer</option>
+                          <option>Warlock</option>
+                          <option>Wizard</option>
+
+                      </select>
+                      </div>
+                      <br>
+                      <div class="col">
+                        <label for="">Background</label>
+                        <select class="form-control" placeholder="">
+                            <option selected></option>
+                            <option>Acolyte</option>
+                            <option>Charlatan</option>
+                            <option>Criminal</option>
+                            <option>Entertainer</option>
+                            <option>Folk Hero</option>
+                            <option>Guild Artisan</option>
+                            <option>Hermit</option>
+                            <option>Noble</option>
+                            <option>Outlander</option>
+                            <option>Pirate</option>
+                            <option>Sage</option>
+                            <option>Sailor</option>
+                            <option>Soldier</option>
+                            <option>Spy</option>
+                            <option>Urchin</option>
+                        </select>
+                      </div>
+                    </div>
+
                     <div class="col-md-4">
                       <div class="col">
-                        <label for="">Name</label>
+                        <label for="">Age</label>
                         <input type="text" class="form-control" placeholder="">
                       </div>
                       <br>
                       <div class="col">
-                        <label for="">Race</label>
-                        <select id="raceSelector" class="form-control" placeholder="">
-                            <option selected></option>
-                            <option>Dragonborn</option>
-                            <option>Dwarf</option>
-                            <option>Elf</option>
-                            <option>Gnome</option>
-                            <option>Half-Elf</option>
-                            <option>Half-Orc</option>
-                            <option>Halfling</option>
-                            <option>Human</option>
-                            <option>Tiefling</option>
-                            <option>Dragonborn | STR+2 CHA+1</option>
-                            <option>Dwarf | CON+2</option>
-                            <option>Elf | DEX+2</option>
-                            <option>Gnome | INT+2</option>
-                            <option>Half-Elf | CHA+2</option>
-                            <option>Half-Orc | STR+2 CON+1</option>
-                            <option>Halfling | DEX+2</option>
-                            <option>Human | ALL+1</option>
-                            <option>Tiefling | CHA+2 INT+1</option>
-                        </select>
+                        <label for="">Alignment</label>
+                        <input type="text" class="form-control" placeholder="">
                       </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="col">
-                          <label for="">Class</label>
-                          <select class="form-control" placeholder="">
-                            <option selected></option>
-                            <option>Barbarian</option>
-                            <option>Bard</option>
-                            <option>Cleric</option>
-                            <option>Druid</option>
-                            <option>Fighter</option>
-                            <option>Monk</option>
-                            <option>Paladin</option>
-                            <option>Ranger</option>
-                            <option>Rogue</option>
-                            <option>Sorcerer</option>
-                            <option>Warlock</option>
-                            <option>Wizard</option>
-
-                        </select>
-                        </div>
-                        <br>
-                        <div class="col">
-                          <label for="">Background</label>
-                          <select class="form-control" placeholder="">
-                              <option selected></option>
-                              <option>Acolyte</option>
-                              <option>Charlatan</option>
-                              <option>Criminal</option>
-                              <option>Entertainer</option>
-                              <option>Folk Hero</option>
-                              <option>Guild Artisan</option>
-                              <option>Hermit</option>
-                              <option>Noble</option>
-                              <option>Outlander</option>
-                              <option>Pirate</option>
-                              <option>Sage</option>
-                              <option>Sailor</option>
-                              <option>Soldier</option>
-                              <option>Spy</option>
-                              <option>Urchin</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="col-md-4">
-                        <div class="col">
-                          <label for="">Age</label>
-                          <input type="text" class="form-control" placeholder="">
-                        </div>
-                        <br>
-                        <div class="col">
-                          <label for="">Alignment</label>
-                          <input type="text" class="form-control" placeholder="">
-                        </div>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row">
-                      <div class="col-md-2"></div>
-                      <button id="statsBtn" style="color: rgba(6, 93, 151, 0.541);" class="col-md-8 btn">Roll for Your Stats!</button>
-                  </div>
-
-                  
-                </form>
-
-                <br><hr><br>
-                <div id="stats">
-                    <div class="row">
-                        <div class="col-md-4">
-                          <div class="col">
-                            <label for="">Strength</label>
-                            <input id="stat_STR" class="form-control" style="width:50%; display: inline-block" readonly>
-                          </div>
-                          <br>
-                            <div class="col">
-                              <label for="">Dexterity</label>
-                              <input id="stat_DEX" class="form-control" style="width:50%; display: inline-block" readonly>
-                          </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="col">
-                              <label for="">Constitution</label>
-                              <input id="stat_CON" class="form-control" style="width:50%; display: inline-block" readonly>
-                            </div>
-                            <br>
-                              <div class="col">
-                                <label for="">Intelligence</label>
-                                <input id="stat_INT" class="form-control" style="width:50%; display: inline-block" readonly>
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="col">
-                              <label for="">Wisdom</label>
-                              <input id="stat_WIS" class="form-control" style="width:50%; display: inline-block" readonly>
-                            </div>
-                            <br>
-                              <div class="col">
-                                <label for="">Charisma</label>
-                                <input id="stat_CHA" class="form-control" style="width:50%; display: inline-block" readonly>
-                            </div>
-                          </div>
                     </div>
                 </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <button id="statsBtn" style="color: rgba(6, 93, 151, 0.541);" class="col-md-8 btn">Roll for Your Stats!</button>
+                </div>
 
-            </div>
-        </div>
-    </div>
+                
+              </form>
+
+              <br><hr><br>
+              <div class="row">
+                  <div class="col-md-3"></div>
+                  <div id="rolls" class="col-md-3">
+                      <ul class="list-group" title="1st Roll">
+                          <li class="list-group-item rolls" id="stat1"></li>
+                      </ul>
+                      <ul class="list-group" title="2nd Roll">
+                          <li class="list-group-item rolls" id="stat2"></li>
+                      </ul>
+                      <ul class="list-group" title="3rd Roll">
+                          <li class="list-group-item rolls" id="stat3"></li>
+                      </ul>
+                      <ul class="list-group" title="4th Roll">
+                          <li class="list-group-item rolls" id="stat4"></li>
+                      </ul>
+                      <ul class="list-group" title="5th Roll">
+                          <li class="list-group-item rolls" id="stat5"></li>
+                      </ul>
+                      <ul class="list-group" title="6th Roll">
+                          <li class="list-group-item rolls" id="stat6"></li>
+                      </ul>
+                  </div>
+
+                  <div id="stats" class="col-md-3">
+                      <ul class="list-group" title="Strength">
+                          <li class="list-group-item stats" id="stat_STR"></li>
+                      </ul>
+                      <ul class="list-group " title="Dexterity">
+                          <li class="list-group-item stats" id="stat_DEX"></li>
+                      </ul>
+                      <ul class="list-group " title="Constitution">
+                          <li class="list-group-item stats" id="stat_CON"></li>
+                      </ul>
+                      <ul class="list-group " title="Intelligence">
+                          <li class="list-group-item stats" id="stat_INT"></li>
+                      </ul>
+                      <ul class="list-group " title="Wisdom">
+                          <li class="list-group-item stats" id="stat_WIS"></li>
+                      </ul>
+                      <ul class="list-group " title="Charisma">
+                          <li class="list-group-item stats" id="stat_CHA"></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-3"></div>
+              </div>
+
+
+<!--
+              <div id="stats">
+              <table class="table table-dark">
+                  <thead style="text-align: center;">
+                    <tr style="text-align: center;">
+                      <th id="head_STR" scope="col">Strength</th>
+                      <th id="head_DEX" scope="col">Dexterity</th>
+                      <th id="head_CON" scope="col">Constitution</th>
+                      <th id="head_INT" scope="col">Intelligence</th>
+                      <th id="head_WIS" scope="col">Wisdom</th>
+                      <th id="head_CHA" scope="col">Charisma</th>
+                    </tr>
+                  </thead>
+                  <tbody style="text-align: center;" id="statTable">
+                    <tr style="text-align: center;">
+                      <td class="bg-info statBox" id="stat_STR"></td>
+                      <td class="bg-info statBox" id="stat_DEX"></td>
+                      <td class="bg-info statBox" id="stat_CON"></td>
+                      <td class="bg-info statBox" id="stat_INT"></td>
+                      <td class="bg-info statBox" id="stat_WIS"></td>
+                      <td class="bg-info statBox" id="stat_CHA"></td>
+                    </tr>
+                  </tbody>
+                </table>
+-->
+
+          </div>
+      </div>
   </div>
+</div>
 
 
 </body>
 </html>
 
+
 <script>
-    $("#stats").hide();
+  $("#stats").hide();
+  $("#rolls").hide();
 
-    $("#statsBtn").click(function(e) {
-        $("#stats").hide();
-        $("#stats").show();
-        e.preventDefault();
-        var numberSTR = (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1);
-        var numberDEX = (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1)
-        var numberCON = (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1)
-        var numberINT = (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1)
-        var numberWIS = (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1)
-        var numberCHA = (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1)
+var rollsLeft = 3;
+  $("#statsBtn").click(function(e) {
+      console.log(rollsLeft);
 
-        console.log($("#raceSelector").val());
-        switch ($("#raceSelector").val()) {
-            case "Dragonborn" :
-                numberSTR += 2;
-                numberCHA += 1;
-                $("#stat_STR").css("color", "green");
-                $("#stat_CHA").css("color", "green");
-            break;
-            case "Dwarf" :
-            break;
-            case "Elf" :
-            break;
-            case "Gnome" :
-            break;
-            case "Half-Elf" :
-            break;
-            case "Half-Orc" :
-            break;
-            case "Halfling" :
-            break;
-            case "Human" :
-            break;
-            case "Tiefling" :
-            break;
-        }
+  e.preventDefault();
+      if( rollsLeft > 0 ){
+          if(($("#raceSelector").val() == null) || ($("#raceSelector").val() == "") || ($("#raceSelector").val() == undefined)){
+              alert("You must fill out the Character Sheet before Rolling for Stats");
+          } else {
+              $("#rolls").show();
+              $("#stats").show();
+              var num1 = (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1);
+              var num2 = (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1)
+              var num3 = (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1)
+              var num4 = (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1)
+              var num5 = (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1)
+              var num6 = (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1)
 
-        $("#stat_STR").val(numberSTR); 
-        $("#stat_DEX").val(numberDEX); 
-        $("#stat_CON").val(numberCON); 
-        $("#stat_INT").val(numberINT);
-        $("#stat_WIS").val(numberWIS); 
-        $("#stat_CHA").val(numberCHA);
-    });
+              $("#stat1").html(num1); 
+              $("#stat2").html(num2); 
+              $("#stat3").html(num3); 
+              $("#stat4").html(num4);
+              $("#stat5").html(num5); 
+              $("#stat6").html(num6);
+          }
+          var dispRowsLeft = rollsLeft - 1;
+          alert("You May Re-Roll Your Stats " + dispRowsLeft +" More Times");
+
+      } else { 
+          alert("You Have Used All Your Rolls!");
+      }
+      rollsLeft--;
+  });
 
 
+
+/*
+      console.log($("#raceSelector").val());
+      switch ($("#raceSelector").val()) {
+          case "Dragonborn" :
+              console.log(numberSTR);
+              numberSTR += 2;
+              numberCHA += 1;
+              console.log(numberSTR);
+              $("#head_STR").css("color", "green");
+              $("#head_CHA").css("color", "green");
+          break;
+          case "Dwarf" :
+          break;
+          case "Elf" :
+          break;
+          case "Gnome" :
+          break;
+          case "Half-Elf" :
+          break;
+          case "Half-Orc" :
+          break;
+          case "Halfling" :
+          break;
+          case "Human" :
+          break;
+          case "Tiefling" :
+          break;
+      }
+
+      $("#stat_STR").html(numberSTR); 
+      $("#stat_DEX").html(numberDEX); 
+      $("#stat_CON").html(numberCON); 
+      $("#stat_INT").html(numberINT);
+      $("#stat_WIS").html(numberWIS); 
+      $("#stat_CHA").html(numberCHA);
+  });
+
+*/
+$('.rolls').click(function() {
+  var numItems = $('.selected').length;
+  if (numItems > 0){
+      alert("only select one roll at a time");
+  } else {
+      var id = $(this).attr('id');
+      $(this).toggleClass("selected");
+  }
+
+  if($(this).attr('class') == 'list-group-item rolls disabled selected'){
+      var r = confirm("You have already used this Roll, Would You Like to Reselect?");
+      if (r == true) {
+          $(this).toggleClass("disabled");
+          $(".selected").toggleClass("selected");
+          $(".stats").html(null);
+
+      } else {
+      }
+  }
+  
+});
+
+$('.stats').click(function() {
+  var numItems = $('.selected').length;
+  if (numItems > 1){
+      alert("only select one roll at a time");
+  } else {
+      var statID = $(this).attr('id');
+      var rollID = $(".selected").attr('id');
+      var rollVal = parseInt($("#" + rollID).text());
+      var race = $("#raceSelector").val();
+
+      if(typeof rollID == "undefined"){
+          alert("You must have a Roll Selected before you choose a Stat.")
+      } else {
+          if(race == "Dragonborn"){
+              if(statID == "stat_CHA"){
+              rollVal = rollVal + 1;
+              $("#" + statID).toggleClass("enhanced");
+              } else if (statID == "stat_STR"){
+                  rollVal = rollVal + 2;
+                  $("#" + statID).toggleClass("enhanced");
+              }
+          } else if (race == "Dwarf"){
+              if(statID == "stat_CON"){
+              rollVal = rollVal + 2;
+              $("#" + statID).toggleClass("enhanced");
+              }
+          } else if (race == "Elf"){
+              if(statID == "stat_DEX"){
+              rollVal = rollVal + 2;
+              $("#" + statID).toggleClass("enhanced");
+              }
+          } else if (race == "Gnome"){
+              if(statID == "stat_INT"){
+              rollVal = rollVal + 2;
+              $("#" + statID).toggleClass("enhanced");
+              }
+          } else if (race == "Half-Elf"){
+              if(statID == "stat_CHA"){
+              rollVal = rollVal + 2;
+              $("#" + statID).toggleClass("enhanced");
+              }
+          } else if (race == "Half-Orc"){
+              if(statID == "stat_STR"){
+              rollVal = rollVal + 2;
+              $("#" + statID).toggleClass("enhanced");
+              } else if (statID == "stat_CON"){
+                  rollVal = rollVal + 1;
+                  $("#" + statID).toggleClass("enhanced");
+              }
+          } else if (race == "Halfling"){
+              if(statID == "stat_DEX"){
+              rollVal = rollVal + 2;
+              $("#" + statID).toggleClass("enhanced");
+              }
+          } else if (race == "Human"){
+              rollVal = rollVal + 1;
+              $("#" + statID).toggleClass("enhanced");
+          } else if (race == "Tiefling"){
+              if(statID == "stat_CHA"){
+              rollVal = rollVal + 2;
+              $("#" + statID).toggleClass("enhanced");
+              } else if (statID == "stat_INT"){
+                  rollVal = rollVal + 1;
+                  $("#" + statID).toggleClass("enhanced");
+              }
+          }
+
+          
+
+          $("#" + statID).html(rollVal);
+          $("#" + rollID).toggleClass("selected");
+          $("#" + rollID).toggleClass("disabled");
+      }
+  }
+
+});
+
+// now you see me
+// now you dont
 </script>
