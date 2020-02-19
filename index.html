@@ -1,82 +1,79 @@
+<style>
+    .ed_ex{
+	    vertical-align: top;
+	    text-align: left;
+        font-size: 12px; 
+        width:100%; 
+        color:white; 
+        padding: 5px;
+        border-spacing: 0.5rem;
+    }
+
+    .t_d{
+        vertical-align: top;
+        text-align: left;
+        padding: 0.5rem;
+    }
+
+    .brighten{
+        color: rgba(255,207,32,1);
+    }
+</style>
 <!doctype html>
 <!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
-
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
     <!-- Mobile Meta -->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Site Meta -->
     <title>Matt Strong | Portfolio</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-    
     <!-- Site Icons -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
 	<!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"> 
-
 	<!-- Custom & Default Styles -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="style.css">
-
 	<!--[if lt IE 9]>
 		<script src="js/vendor/html5shiv.min.js"></script>
 		<script src="js/vendor/respond.min.js"></script>
 	<![endif]-->
-
 </head>
 <body class="left-menu">  
-    
     <div class="menu-wrapper">
         <header class="vertical-header">
             <div class="vertical-header-wrapper">
                 <nav class="nav-menu">
                     <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" alt=""></a>
+                        <img style="max-height: 50px; max-width: 50px;" src="images/logo.png" alt="">
                     </div><!-- end logo -->
-
                     <div class="margin-block"></div>
-
                     <ul class="primary-menu">
-                        <li class="child-menu"><a href="index.html">Home <i class="fa fa-angle-right"></i></a>
-                            
-                        </li>
-
+                        <li class="child-menu"><a href="index.html">Home <i class="fa fa-angle-right"></i></a></li>
                         <li class="child-menu"><a href="#">Portfolio <i class="fa fa-angle-right"></i></a>
                             <div class="sub-menu-wrapper">
                                 <ul class="sub-menu center-content">
-                                        <li><a href="https://spacefacemusic.com" target="blank" >Web Design | Spaceface</a></li>
-                                        <li><a href="WW.html">Graphic Design | Wealthy West</a></li>
-                                        <li><a href="todo.html">Application | To Do List </a></li>
-                                        <li><a href="charactersheet.html">Web Form | Character Sheet </a></li>
-
+                                    <li><a href="https://spacefacemusic.com" target="blank" >Web Design | Spaceface</a></li>
+                                    <li><a href="WW.html">Graphic Design | Wealthy West</a></li>
+                                    <li><a href="todo.html">Application | To Do List </a></li>
+                                    <li><a href="charactersheet.html">Web Form | Character Sheet </a></li>
                                 </ul>
                             </div>
                         </li>
-                        
-                        
-                        
                     </ul>
-                    
                     <div class="margin-block"></div>
-
-                    <div class="menu-search">
-                        
-                    </div><!-- end menu-search -->
-
+                    <div class="menu-search"></div><!-- end menu-search -->
                     <div class="margin-block"></div>
-
                     <div class="menu-social">
                         <ul class="list-inline text-center">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -89,75 +86,67 @@
             </div><!-- end vertical-header-wrapper -->
         </header><!-- end header -->
     </div><!-- end menu-wrapper -->
-
     <div id="wrapper">
-
-        <div id="home" class="video-section js-height-full">
+        <div id="home" class="video-section">
             <div class="overlay"></div>
             <div class="home-text-wrapper relative container">
                 <div class="home-message">
-                    <img src="images/biglogo.png" alt="">
                     <p id="nameText">Matt Strong</p>
                     <hr>
                     <h2 id="portfolioText">Web Design Portfolio</h2>
-                    <br>
-                    <br>
-                   
                     <div class="btn-wrapper">
                         <div class="text-center">
                             <a href="#bio" class="btn btn-primary">Read More</a>
                         </div>
-                    </div><!-- end row -->
+                    </div>
+                    <br>
                 </div>
             </div>
         </div>
 
-        <div class="section bgcolor noover" id="bio">
+        <div class="section db" id="bio">
             <div class="container">
+                <div>
+                    <div class="row">
+                        <center><h2 style="color:white; font-size:14px;"><em>"Design is intelligence made <a style="opacity: 0.1" id="visible_animation">visible</a>."</em><a style="padding-left:5px; font-size:10px; color:black;"> -Alina Wheeler</a></h2></center>
+                    </div>
+                    <div id="line" style="background-image: linear-gradient(to left,rgba(255,207,32,1), black, black, black, black, black);height:2px; width:1%;"></div>
+                </div>
+                <br>
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="tagline-message">
-                            <h3><em>"Design is intelligence made visible."</em></h3>
-                            <h2 id="authorText">Alina Wheeler</h2>
-                            <hr>
-                            <br>
-                            <h3>Welcome!<h3>
-                             
-                                <h1 style="color: white; font-size: 30px;">
-                                My name is Matt Strong. <br><br>
-                                I am a front-end web designer from Memphis, TN.  <br><br>
-                                I specialize in Visual Art and Software Engineering. <br><br> 
-                                Below you will find some examples of my work.
-                            </h1>
-                                
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-10" style="border: 2px solid slategray; border-radius: 15px; padding:2em;">
+                                <center><img style="opacity:0.1; width:10px; height:10px;" id="profile_pic" src="images/profile.png" alt="profile"></center>
+                                <div id="bio_text" style="opacity: 1%">
+                                    <center></center><h3 style="color:white;"><u>About Me</u><h3></center>
+                                    <h1 style="color: white; font-size: 20px;">
+                                    <p>My name is Matt Strong, and I am a Software Developer based out of Memphis, TN.</p>
+                                    <p>I specialize in Visual Art, Web Design, and Application Development.</p>
+                                    <p>Below you will find some examples of my work.</p>
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
                         </div>
                     </div><!-- end col -->
                 </div><!-- end row -->          
             </div><!-- end container -->
         </div><!-- end section -->
 
-
-        <se
-
         <section class="section lb">
             <div class="container">
                 <div class="section-title text-center">
                     <h3>Recent Works</h3>
-                    <p>Below are my previous projects, which range from Graphic Design to Full-Stack applications.</p>
                 </div><!-- end title -->
-
                 <div class="case-top clearfix">
-                    <div class="pull-left hidden-xs">
-                        <p>Showing 1–12 of 24 results</p>
-                    </div><!-- end col -->
-
                     <div class="pull-right">
-                        
                     </div><!-- end col -->
                 </div><!-- end row -->
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-12">
                         <div class="portfolio row with-desc">
                             <div class="post-media pitem item-w1 item-h1 cat1">
                                 <div class="entry">
@@ -206,133 +195,80 @@
 
                             <div class="post-media pitem item-w1 item-h1 cat4">
                                 <div class="entry">
-                                    <img src="images/upload/desc_work_04.png" alt="" class="img-responsive">
+                                    <img src="images/cs.png" alt="">
                                     <div class="magnifier">
-                                        <a class="golink" href="#">
+                                        <a class="golink" href="charactersheet.html">
                                            <i class="fa fa-link"></i>
                                         </a>
                                     </div><!-- end magnifier -->
                                 </div><!-- end entry -->
                                 <div class="item-desc">
-                                    <h4><a href="#">Luana 3D Max</a></h4>
-                                    <p>Nunc vitae metus sagittis, pharetra risus non, luctus ligula volutpat. </p>
+                                    <h4><a href="#">HTML Form Application</a></h4>
+                                    <p>Extensive Form for Dungeons & Dragons Character Creation</p>
                                 </div>
-                            </div><!-- end post-media -->
-
-                            <div class="post-media pitem item-w1 item-h1 cat1">
-                                <div class="entry">
-                                    <img src="images/upload/desc_work_05.png" alt="" class="img-responsive">
-                                    <div class="magnifier">
-                                        <a class="golink" href="#">
-                                           <i class="fa fa-link"></i>
-                                        </a>
-                                    </div><!-- end magnifier -->
-                                </div><!-- end entry -->
-                                <div class="item-desc">
-                                    <h4><a href="#">Custom M Logo</a></h4>
-                                    <p>Proin non mollis orci, quis maximus nisi. In imperdiet neque eu metus. </p>
-                                </div>
-                            </div><!-- end post-media -->
-                            <div class="post-media pitem item-w1 item-h1 cat1">
-                                    <div class="entry">
-                                        <img src="images/upload/desc_work_05.png" alt="" class="img-responsive">
-                                        <div class="magnifier">
-                                            <a class="golink" href="#">
-                                               <i class="fa fa-link"></i>
-                                            </a>
-                                        </div><!-- end magnifier -->
-                                    </div><!-- end entry -->
-                                    <div class="item-desc">
-                                        <h4><a href="#">Custom M Logo</a></h4>
-                                        <p>Proin non mollis orci, quis maximus nisi. In imperdiet neque eu metus. </p>
-                                    </div>
-                                </div><!-- end post-media -->
-
-                            
+                            </div><!-- end post-media --> 
+                        </div>
                     </div><!-- end col -->
                 </div><!-- end row -->
             </div><!-- end container -->
         </section><!-- end section -->
-
         <br><br>
-
-        
-
-        <section class="section parallax" data-stellar-background-ratio="0.6" style="background-image:url('images/upload/parallax_01.jpg'); background-color: slategray;">
-            <div class="container" >
-                <div class="section-title light-color text-center" >
-
-                    <h3>Process</h3>
+        <section style="background-color: slategray;">
+            <div class="container">
+		   <br><br>
+                <div class="col-12">
+                    <center><h1 style="color: white;">Education & Experience</h1></center>
                     <br>
-                    <p style="width: 100%; color: white;">The key ingredient to a perfect product is communication. </p>
-                </div><!-- end title -->
-
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="process-box">
-                            <div class="process-front text-center">
-                                <i class="flaticon-lightbulb-idea"></i>
-                                <h3>Brainstorming</h3>
-                            </div><!-- end front -->
-
-                            <div class="process-end text-center">
-                                <h3></h3>
-                                <p>We discuss what you are interested in producing. <br>It is my job to sculpt the vision you seek to create.</p>
-                            </div><!-- end end -->
-                        </div><!-- end process -->
-                    </div><!-- end col -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="process-box">
-                            <div class="process-front text-center">
-                                <i class="flaticon-computer"></i>
-                                <h3>Production</h3>
-                            </div><!-- end front -->
-
-                            <div class="process-end text-center">
-                                <h3></h3>
-                                <p>I take all of the steps to breathe life into your design, from front-end visual art to software engineering.</p>
-                            </div><!-- end end -->
-                        </div><!-- end process -->
-                    </div><!-- end col -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="process-box">
-                            <div class="process-front text-center">
-                                <i class="flaticon-people"></i>
-                                <h3>Showcase</h3>
-                            </div><!-- end front -->
-
-                            <div class="process-end text-center">
-                                <h3></h3>
-                                <p>We work through where the project is, and how I may improve the design to better suit your needs.</p>
-                            </div><!-- end end -->
-                        </div><!-- end process -->
-                    </div><!-- end col -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="process-box">
-                            <div class="process-front text-center">
-                                <i class="flaticon-smiley"></i>
-                                <h3>Satisfaction</h3>
-                            </div><!-- end front -->
-                            <div class="process-end text-center">
-                                <h3></h3>
-                                <p>I will not allow the completion of a project until the client is entirely satisfied. </p>
-                            </div><!-- end end -->
-                        </div><!-- end process -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
+                    <table class="ed_ex">
+                        <tr style="font-size: 16px;">
+                          <th class="t_d" style="width: 20%;">Education</th>
+                          <th class="t_d" style="width: 10%;">Date</th>
+                          <th class="t_d" style="width: 70%;">Description</th>
+                        </tr>
+                        <tr>
+                          <td class="t_d">LaunchCode</td>
+                          <td class="t_d">2019</td>
+				<td class="t_d"><em>Full Stack Coding Education</em> <br>Instructed in Python, HTML, CSS, JavaScript, jQuery, and SQL.</td>
+                        </tr>
+                        <tr>
+                          <td class="t_d">Tech901</td>
+                          <td class="t_d">2018</td>
+				<td class="t_d"><em>CompTIA A+ Certification</em><br>IT Fundamentals: Hardware, Software, and Security.</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table class="ed_ex">
+                        <tr style="font-size: 16px;">
+                          <th class="t_d" style="width:20%;">Experience</th>
+                          <th class="t_d" style="width:10%;">Date</th>
+                          <th class="t_d" style="width:70%;">Description</th>
+                        </tr>
+                        <tr>
+                          <td class="t_d">Upper Edge Tech</td>
+                          <td class="t_d"> 2019-2020</td>
+				<td class="t_d"><em>Assistant Software Developer</em><br>
+                            Integrate Full-Stack applications to navigate through multiple databases. <br>
+                            Back-End infrastructure utilizing primarily PHP. <br>
+                            Front-End framework using HTML, CSS, JavaScript, jQuery, and Bootstrap. <br>
+                            MsSQL and MySQL databases queried through SQL and Codeigniter.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="t_d">The Flaming Lips</td>
+                          <td class="t_d">2015-2018</td>
+				<td class="t_d"><em>Backline Technician</em><br>
+                            Ensure the working condition and logistics of electronic equipment for an international musical act.
+                        </td>
+                        </tr>
+                    </table>
+			<br><br>
+                </div>
+            </div>
         </section>
-   
-
-
-
         <footer class="section footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12">
+                    <div class="col-lg-6 col-12">
                         <div class="widget clearfix">
                             <div class="newsletter-widget">
                                
@@ -346,13 +282,6 @@
                             </div><!-- end newsletter -->
                         </div><!-- end widget -->
                     </div><!-- end col -->
-
-                    
-                                    
-                                </ul>
-                            </div><!-- end list-widget -->
-                        </div><!-- end widget -->
-                    </div><!-- end col -->
                 </div><!-- end row -->
             </div><!-- end container -->
         </footer><!-- end footer -->
@@ -360,12 +289,11 @@
         <div class="section copyrights">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-3">
+                    <div class="col-lg-3 col-3">
                         <div class="cop-logo">
-                            <img src="images/logo-normal.png" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-9 col-md-9 text-right">
+                    <div class="col-lg-9 col-9 text-right">
                         <div class="cop-links">
                             <ul class="list-inline">
                                 <li> 2020  •  Matt Strong</li>
@@ -403,7 +331,29 @@
                 "fallback_image": "images/dummy.png",   //Fallback image path
                 "priority": "html5"             //Priority for html5 (if set to flash and tested locally will give a flash security error)
             });
+
+            $("#line").animate({width: "100%"}, 1500);
+            $("#visible_animation").animate({opacity:'1.0'},1500);
+            $("#visible_animation").addClass('brighten');
+
         });
+
+        $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        var os1 = $('#home').offset().top;
+        var ht1 = $('#home').height();
+        var os2 = $('#message').offset().top;
+        var ht2 = $('#message').height();
+        if(scroll > os1 + ht1){
+
+        }
+        if(scroll > os1 + ht1){
+            $("#profile_pic").animate({opacity: '1.0', height: '150px', width: '150px'}, {duration:5000, complete: function(){
+                $("#bio_text").animate({opacity:'1.0'},2500);
+            }
+            });
+        }
+    });
     </script>
 
 </body>
